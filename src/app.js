@@ -4,11 +4,13 @@ const hbs = require('hbs')
 const app = express()
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
+const port = process.env.PORT || 3306
 
 //Define paths for Express Congif
 const DirectoryPath = path.join(__dirname, '../public')
 const ViewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
+
 
 //Setup handlebars engine and view setup
 app.set('view engine', 'hbs')
@@ -99,6 +101,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(3306, () => {
-    console.log('Server is on @ 3306')
+app.listen(port, () => {
+    console.log(`Server is up on ${port}`)
 })
