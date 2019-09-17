@@ -77,7 +77,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help Page',
-        HelpTxt: 'This is some helpful text',
+        HelpTxt: 'Helpful text for website',
         name: 'Qasim',
     })
 })
